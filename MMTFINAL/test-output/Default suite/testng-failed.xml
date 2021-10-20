@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.makemytrip.LoginTest">
+      <class name="com.makemytrip.SignUpTest">
         <methods>
-          <include name="loginSignupbtn"/>
-          <include name="setup"/>
-          <include name="afterMethod"/>
+          <include name="invalidProfileNameandPasswordVerification"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.makemytrip.LoginTest -->
+      </class> <!-- com.makemytrip.SignUpTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,54 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">13</td><td class="num">0</td><td class="num attn">1</td><td class="num">44,549</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">69,198</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.makemytrip.LoginTest</td><td><a href="#m0">loginSignupbtn</a></td><td rowspan="1">1634618151404</td><td rowspan="1">243</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="13">com.makemytrip.LoginTest</td><td><a href="#m1">blankEmail</a></td><td rowspan="1">1634618166551</td><td rowspan="1">2004</td></tr><tr class="passedeven"><td><a href="#m2">blankPasswordField</a></td><td rowspan="1">1634618131750</td><td rowspan="1">3232</td></tr><tr class="passedeven"><td><a href="#m3">continueButtonDisplay</a></td><td rowspan="1">1634618134984</td><td rowspan="1">2041</td></tr><tr class="passedeven"><td><a href="#m4">invalidEmail</a></td><td rowspan="1">1634618137026</td><td rowspan="1">3536</td></tr><tr class="passedeven"><td><a href="#m5">invalidMobileNumber</a></td><td rowspan="1">1634618140564</td><td rowspan="1">3951</td></tr><tr class="passedeven"><td><a href="#m6">invalidPassword</a></td><td rowspan="1">1634618144517</td><td rowspan="1">5115</td></tr><tr class="passedeven"><td><a href="#m7">loginButton</a></td><td rowspan="1">1634618149633</td><td rowspan="1">24</td></tr><tr class="passedeven"><td><a href="#m8">loginPage</a></td><td rowspan="1">1634618149657</td><td rowspan="1">1746</td></tr><tr class="passedeven"><td><a href="#m9">mimimumCharMessage</a></td><td rowspan="1">1634618151654</td><td rowspan="1">3416</td></tr><tr class="passedeven"><td><a href="#m10">resetPassword</a></td><td rowspan="1">1634618155072</td><td rowspan="1">3483</td></tr><tr class="passedeven"><td><a href="#m11">validEmailID</a></td><td rowspan="1">1634618158556</td><td rowspan="1">2468</td></tr><tr class="passedeven"><td><a href="#m12">validMobileNumber</a></td><td rowspan="1">1634618161025</td><td rowspan="1">2048</td></tr><tr class="passedeven"><td><a href="#m13">validPassword</a></td><td rowspan="1">1634618163074</td><td rowspan="1">3475</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.makemytrip.SignUpTest</td><td><a href="#m0">invalidProfileNameandPasswordVerification</a></td><td rowspan="1">1634741836704</td><td rowspan="1">55279</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.makemytrip.LoginTest#loginSignupbtn</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\loginSignupbtnPass.png</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at com.makemytrip.LoginTest.loginSignupbtn(LoginTest.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.makemytrip.LoginTest#blankEmail</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\blankEmailPass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.makemytrip.LoginTest#blankPasswordField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.makemytrip.LoginTest#continueButtonDisplay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.makemytrip.LoginTest#invalidEmail</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\invalidEmailPass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.makemytrip.LoginTest#invalidMobileNumber</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\invalidMobileNumberPass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.makemytrip.LoginTest#invalidPassword</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\invalidPasswordPass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.makemytrip.LoginTest#loginButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.makemytrip.LoginTest#loginPage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\loginPagePass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.makemytrip.LoginTest#mimimumCharMessage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\mimimumCharMessagePass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.makemytrip.LoginTest#resetPassword</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\resetPasswordPass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.makemytrip.LoginTest#validEmailID</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ScreenShots\validEmailIDPass.png</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.makemytrip.LoginTest#validMobileNumber</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.makemytrip.LoginTest#validPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.makemytrip.SignUpTest#invalidProfileNameandPasswordVerification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

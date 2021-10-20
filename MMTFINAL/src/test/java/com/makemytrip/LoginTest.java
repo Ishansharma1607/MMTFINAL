@@ -13,14 +13,13 @@ import com.baseClass.Keywords;
 
 public class LoginTest extends Keywords {
 
-	@Test
+	@Test(enabled = false)
 	public void loginSignupbtn() throws Exception {
 
 		try {
 			assertTrue(LoginPage.LoginSignupbtn(driver).isDisplayed());
 			// to check if the Login/Sign-up button appears on the HomePage
 			takeSnap("loginSignupbtnPass");
-			Assert.assertTrue(false);
 
 		} catch (Exception e) {
 			takeSnap("loginSignupbtnFail");
@@ -29,7 +28,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void loginButton() throws Exception {
 		try {
 			assertTrue(LoginPage.Loginbtn(driver).isDisplayed());
@@ -40,7 +39,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void loginPage() throws Exception {
 		try {
 			driver.get(url);
@@ -55,7 +54,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void invalidEmail() throws Exception {
 		try {
 			driver.get(url);
@@ -77,7 +76,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test(priority = 1)
+	@Test(enabled = false)
 	public void blankEmail() throws Exception {
 		try {
 			driver.get(url);
@@ -95,7 +94,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void continueButtonDisplay() throws Exception {
 		try {
 			driver.get(url);
@@ -110,7 +109,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void validEmailID() throws Exception {
 		try {
 			driver.get(url);
@@ -127,9 +126,10 @@ public class LoginTest extends Keywords {
 			Assert.assertTrue(false);
 		}
 	}
+	
 
 	@SuppressWarnings("deprecation")
-	@Test
+	@Test(enabled = false)
 	public void blankPasswordField() throws Exception {
 		try {
 			driver.get(url);
@@ -148,7 +148,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void invalidPassword() throws Exception {
 		try {
 			driver.get(url);
@@ -169,7 +169,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void resetPassword() throws Exception {
 		try {
 			driver.get(url);
@@ -190,7 +190,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void validPassword() throws Exception {
 		try {
 			driver.get(url);
@@ -212,7 +212,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void validMobileNumber() throws Exception {
 		try {
 			driver.get(url);
@@ -228,7 +228,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void invalidMobileNumber() throws Exception {
 		try {
 			driver.get(url);
@@ -246,7 +246,7 @@ public class LoginTest extends Keywords {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void mimimumCharMessage() throws Exception {
 		try {
 			driver.get(url);
