@@ -6,6 +6,17 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import java.io.FileOutputStream;
+
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -20,16 +31,29 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Keywords {
 
-	public WebDriver driver;
+	public static WebDriver driver;
+	public static Logger logger;
+	
 	String browser;
 	String read;
 
 	public String url;
+	
+	//Excel Data declaration
+
+	public static FileInputStream fi;
+	public static FileOutputStream fo;
+	public static XSSFWorkbook wb;
+	public static XSSFSheet ws;
+	public static XSSFRow row;
+	public static XSSFCell cell;
+
 	
 	// login
 	public String invalidemail;
@@ -94,6 +118,7 @@ public class Keywords {
 		return READ;
 
 	}
+	
 
 	public String readlocator(String data) throws IOException {
 		String READ;
@@ -105,9 +130,73 @@ public class Keywords {
 		return READ;
 
 	}
+	
+	
+	public static int getRowCount(String xlfile,String xlsheet) throws IOException 
+	{
+		fi=new FileInputStream(xlfile);
+		wb=new XSSFWorkbook(fi);
+		ws=wb.getSheet(xlsheet);
+		int rowcount=ws.getLastRowNum();
+		wb.close();
+		fi.close();
+		return rowcount;		
+	}
+	
+	
+	public static int getCellCount(String xlfile,String xlsheet,int rownum) throws IOException
+	{
+		fi=new FileInputStream(xlfile);
+		wb=new XSSFWorkbook(fi);
+		ws=wb.getSheet(xlsheet);
+		row=ws.getRow(rownum);
+		int cellcount=row.getLastCellNum();
+		wb.close();
+		fi.close();
+		return cellcount;
+	}
+	
+	public static String getCellData(String xlfile,String xlsheet,int rownum,int colnum) throws IOException
+	{
+		fi=new FileInputStream(xlfile);
+		wb=new XSSFWorkbook(fi);
+		ws=wb.getSheet(xlsheet);
+		row=ws.getRow(rownum);
+		cell=row.getCell(colnum);
+		String data;
+		try 
+		{
+			DataFormatter formatter = new DataFormatter();
+            String cellData = formatter.formatCellValue(cell);
+            return cellData;
+		}
+		catch (Exception e) 
+		{
+			data="";
+		}
+		wb.close();
+		fi.close();
+		return data;
+	}
+	
+	public static void setCellData(String xlfile,String xlsheet,int rownum,int colnum,String data) throws IOException
+	{
+		fi=new FileInputStream(xlfile);
+		wb=new XSSFWorkbook(fi);
+		ws=wb.getSheet(xlsheet);
+		row=ws.getRow(rownum);
+		cell=row.createCell(colnum);
+		cell.setCellValue(data);
+		fo=new FileOutputStream(xlfile);
+		wb.write(fo);		
+		wb.close();
+		fi.close();
+		fo.close();
+	}
+	
 
 	@BeforeTest
-	public void setup() throws Exception {
+	public void setUp() throws Exception {
 
 		FileInputStream finput = new FileInputStream("src\\test\\resources\\config.properties");
 		Properties prop = new Properties();
@@ -160,15 +249,25 @@ public class Keywords {
 			break;
 
 		}
-
-		driver.get(url);
+		
 		driver.manage().window().maximize();
+		driver.get(url);
+		
+
+		logger = Logger.getLogger("***MakeMyTrip--PROJECT****");
+		PropertyConfigurator.configure("src\\test\\resources\\log4j.properties");
+		
+		
+
 	}
 
 	@AfterTest
-	public void afterMethod() throws Exception {
+	public void tearDown() throws Exception {
 		Thread.sleep(2000);
 		driver.quit();
+		
+		
+		
 	}
 
 }

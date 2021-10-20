@@ -10,7 +10,7 @@
 	</test>
 	<test  name="Functional Test Registration">
 		<classes>
-			<class name= "com.makemytrip.RegistrationTest"></class>
+			<class name= "com.makemytrip.SignUpTest"></class>
 		</classes>
 	</test>
 	<test  name="Functional Test Flight">

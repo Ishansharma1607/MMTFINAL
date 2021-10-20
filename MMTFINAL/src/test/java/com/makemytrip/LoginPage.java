@@ -7,32 +7,28 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
 	
 static WebElement webelem;
-	WebDriver driver;
-	static By loginbtn = By.xpath("//label[normalize-space()='Login with Phone/Email']");
-	
-	
-	//*[@id='SW']/div[1]/div[1]/ul/li[3]
-	static By loginpagedisp = By.xpath("//span[@class='font26 latoBlack']");
-	static By usernameid = By.id("username");
-	static By emaillabel =  By.xpath("//label[@class='font14 latoBold appendBottom10']");
+	WebDriver driver;	
+	static By loginbtn = By.xpath("//label[normalize-space()='Login with Phone/Email']");//Pop Having the Login with Phone/Email
+	static By loginpagedisp = By.xpath("//span[@class='font26 latoBlack']");//To Check whether the  LoginPage Displayed or not 
+	static By usernameid = By.id("username");//user input box
+	static By emaillabel =  By.xpath("//label[@class='font14 latoBold appendBottom10']");//Checking whether the Email Is written above the email input box 
 	static By emailmessg = By.xpath("//*[@id='SW']/div[1]/div[2]/div[2]/section/form/div[1]/p"); //after entering email click continue then ..
-	//static By emailmessg = By.xpath("//label[@class='font14 latoBold']"); //after entering email click continue then ..
-	static By enter_username = By.cssSelector("input[id='username']");
-	static By continuebtn = By.xpath("//button[@class='capText font16']");
-	static By loginwthpassmessg = By.xpath("//span[@class='font26 latoBlack']");
-	static By passid = By.id("password");
-	static By passlbl =By.xpath("//label[@class='font14 latoBold']");
-	static By entrpassmssg = By.xpath("//p[@class='validity font12 redText appendTop5 makeFlex']");
-	static By lgnpagebtn = By.xpath("//button[@class='capText font16']");
-	static By inccrtmsg = By.xpath("//*[@id='SW']/div[1]/div[2]/div[2]/section/div[2]/p[3]/span[2]");
-	static By rstpasslnk = By.xpath("//a[@class='pushRight modalResetBtn font12 appendRight5']");
-	static By rstpasslbl = By.xpath("//p[@class='modalTitle makeFlex hrtlCenter font26 latoBold appendBottom5']");
-	static By vrfymobno = By.xpath("//p[@class='modalTitle makeFlex hrtlCenter font26 latoBold appendBottom5']");
+	static By enter_username = By.cssSelector("input[id='username']");//
+	static By continuebtn = By.xpath("//button[@class='capText font16']");//cpntinue button
+	static By loginwthpassmessg = By.xpath("//span[@class='font26 latoBlack']");//Login Page Header like "Login With Password"
+	static By passid = By.id("password");//password Input Box
+	static By passlbl =By.xpath("//label[@class='font14 latoBold']");//Above the Password input box to check whether "Password" is written or  not
+	static By entrpassmssg = By.xpath("//p[@class='validity font12 redText appendTop5 makeFlex']");//inside the input box Whether the box as empty the "Please enter password"
+	static By lgnpagebtn = By.xpath("//button[@class='capText font16']");//Login Page Login Button
+	static By inccrtmsg = By.xpath("//*[@id='SW']/div[1]/div[2]/div[2]/section/div[2]/p[3]/span[2]");//Incorrect Password Message
+	static By rstpasslnk = By.xpath("//a[@class='pushRight modalResetBtn font12 appendRight5']");//Reset Password Link
+	static By rstpasslbl = By.xpath("//p[@class='modalTitle makeFlex hrtlCenter font26 latoBold appendBottom5']");//Header Label for Reset password page
+	static By vrfymobno = By.xpath("//p[@class='modalTitle makeFlex hrtlCenter font26 latoBold appendBottom5']");//Header Label for Verify Mobile number
 	static By notregmssg = By.xpath("//*[@id='SW']/div[1]/div[2]/div[2]/div[2]/div/div[2]/p");
-	static By servererror = By.xpath("//span[@data-cy='serverError']");
-	static By mincharpassmsg = By.cssSelector("input[id='password']");
-	static By loginSignupbtn = By.xpath("//li[@class='makeFlex hrtlCenter font10 makeRelative lhUser userLoggedOut']");
-	static By finlogbtn= By.xpath("//button[@class='capText font16']");
+	static By servererror = By.xpath("//span[@data-cy='serverError']");//Invalid Phone number error message
+	static By mincharpassmsg = By.cssSelector("input[id='password']");//password
+	static By loginSignupbtn = By.xpath("//li[@class='makeFlex hrtlCenter font10 makeRelative lhUser userLoggedOut']");//Login/CreateAccount
+	static By finlogbtn= By.xpath("//button[@class='capText font16']");//login buttton
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
